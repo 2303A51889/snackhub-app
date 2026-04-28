@@ -23,7 +23,7 @@ app.get('*', (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect("mongodb://127.0.0.1:27017/snackhub")
   .then(async () => {
     console.log('✅ MongoDB connected successfully');
     await seedDatabase();
